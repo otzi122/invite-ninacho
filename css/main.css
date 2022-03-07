@@ -243,7 +243,7 @@ textarea {
 }
 #details{
     position: absolute;
-    right: 5%;
+    left: 5%;
     top: 4%;
     width: 90%;
     border-radius: 30px;
@@ -307,7 +307,7 @@ textarea {
 }
 
 .olaf {
-    bottom: 5%;
+    bottom: 3%;
     position: absolute;
     width: 70%;
     right: 17%;
@@ -319,11 +319,11 @@ textarea {
    ========================================================================== */
 
 #bg-scene-1{ 
-    background: url('../img/scene_1/bg.jpg') no-repeat top / cover;
+    background: url('../img/scene_1/bg.jpg') no-repeat bottom / cover;
 }
 
 #bg-scene-2{
-    background: url('../img/scene_2/bg.jpg') no-repeat top / cover;
+    background: url('../img/scene_2/bg.jpg') no-repeat bottom / cover;
 }
 
 .bg_scene{
