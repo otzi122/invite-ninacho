@@ -306,6 +306,10 @@ textarea {
     border-radius: 8px;
 }
 
+#scene-2 .olaf{
+    max-width: 250px;
+}
+
 .olaf {
     bottom: 3%;
     position: absolute;
@@ -557,19 +561,11 @@ textarea {
 @media (max-width: 960px), handheld and (orientation: landscape) { 
    #countdown{ font-size: 2.1em; }
     .background, .page{ min-height: 500px; }
-    .birds{ bottom: 15% }
-    .gabi{ top: 35% }
-    .nigel{ top: 47% }
-    .btn-orange{ left: 0; right: unset; }
-    #details{ padding: 20px 20px 10px; top: 10% }
+    #details{ padding: 20px 20px 10px; top: 5% }
     #details h3 { font-size: 18px }
     #details ul li { font-size: 0.9em;}
     #details ul li img{ width: 24px}
     #details ul li a span{ font-size: 0.9em}
-    #details .monos{ top: -16%;}
-    #cola-1{ top: -15%;right: 15%; width 50% ; width: 9%;}
-    #cola-2{ top: -10%;right: 0%; width: 11%;}
-    #cola-3{ top: -24%;right: 37%; width: 11%;}
 }
 
 
