@@ -251,6 +251,7 @@ textarea {
     padding: 20px 30px;
     box-sizing: border-box;
     background: #FFF;
+    max-width: 363px;
 }
 
 #details h3{
@@ -308,7 +309,8 @@ textarea {
 }
 
 #scene-2 .olaf{
-    max-width: 50%;
+    width: 50%;
+    max-width: 270px;
     bottom: 2%;
 }
 
