@@ -203,6 +203,7 @@ textarea {
 .title{
     max-width: 70%;
     margin-left: 15%;
+    margin-top: -5%;
 }
 
 .btn-white{
@@ -215,7 +216,7 @@ textarea {
     border: 10px solid #FFF;
     background: #FFF;
     color: #000;
-    padding: 10px 15px;
+    padding: 0 15px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -257,7 +258,8 @@ textarea {
     text-transform: uppercase;
     color: #003c94;
     letter-spacing: 1.6px;
-    font-size: 30px
+    font-size: 32px;
+    margin: 10px 0;
 }
 
 #details ul{
@@ -268,10 +270,10 @@ textarea {
 
 #details ul li {
     position: relative;
-    padding: 10px 0 20px 60px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #003c94
+    padding: 10px 0 20px 70px;
+    font-size: 19px;
+    color: #003c94;
+    line-height: 22px;
 }
 
 #details ul li a.map-link {
@@ -279,12 +281,11 @@ textarea {
     color: #003c94;
     padding: 5px 20px;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 18px;
     transition: all 0.3s ease-in-out;
     border: 3px solid #003c94;
     box-shadow: 0 0 9px #CCC;
     display: inline-block;
-    line-height: 14px;
 }
 
 #details ul li:hover a.map-link{
@@ -300,7 +301,7 @@ textarea {
     position: absolute;
     top: 10px;
     left: 0;
-    width: 40px;
+    width: 30px;
     background: #003c94;
     padding: 8px;
     border-radius: 8px;
@@ -308,10 +309,11 @@ textarea {
 
 #scene-2 .olaf{
     max-width: 50%;
+    bottom: 2%;
 }
 
 .olaf {
-    bottom: 3%;
+    bottom: -2%;
     position: absolute;
     width: 70%;
     right: 17%;
@@ -561,11 +563,6 @@ textarea {
 @media (max-width: 960px), handheld and (orientation: landscape) { 
    #countdown{ font-size: 2.1em; }
     .background, .page{ min-height: 500px; }
-    #details{ padding: 20px 20px 10px; top: 5% }
-    #details h3 { font-size: 18px }
-    #details ul li { font-size: 0.9em;}
-    #details ul li img{ width: 24px}
-    #details ul li a span{ font-size: 0.9em}
 }
 
 
