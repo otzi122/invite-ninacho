@@ -21,7 +21,7 @@ html {
 body{
     position: relative;
     min-height: 100%;
-    font-family: 'Boogaloo', cursive;
+    font-family: 'Barlow Condensed', sans-serif;
     overflow-x: hidden;
 }
 
@@ -110,7 +110,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Main
    ========================================================================== */
 
 #loader{
@@ -129,23 +129,24 @@ textarea {
 }
 
 .page {
-    background: #ccc;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 99999;
 }
 
 #page-2{
     left: 100%;
 }
+
 .page.active{
     display: block;
 }
 
 .content{
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     position: relative;
     z-index: 2;
@@ -165,7 +166,7 @@ textarea {
     position: absolute;
     top: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -174,16 +175,83 @@ textarea {
     height: 100%;
 }
 
+.btn{
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    padding: 8px 46px 8px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 30px;
+    margin: 15px;
+}
+
+.btn .icon{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 10px;
+    bottom: -7px;
+}
+
+.btn:hover,
+.btn:hover .icon .cursor{
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-purple{
+    background: #4A299F;
+    color: #FFF;
+}
+
+.btn-purple .icon .cursor{
+    fill:#FEF45D;
+}
+
+.btn-purple:hover{
+    color: #4A299F;
+    background: #FEF45D;
+}
+
+.btn-purple:hover .icon .cursor{
+    fill:#4A299F;
+}
+
+.btn-yellow{
+    background: #FEF45D;
+    color: #4A299F;
+}
+
+.btn-yellow .icon .cursor{
+    fill:#4A299F;
+}
+
+.btn-yellow:hover{
+    color: #FEF45D;
+    background: #4A299F;
+}
+
+.btn-yellow:hover .icon .cursor{
+    fill:#FEF45D;
+}
+
+.footer{
+    margin-top: 15px;
+    text-align: center;
+}
+
+
 /* ==========================================================================
    SCENE 1
    ========================================================================== */
 
 #countdown {
-    color: #FFF;
-    font-size: 66px;
+    color: #4A299F;
+    font-size: 3em;
     font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 
+    /* text-shadow: 
         0 1px 0 rgb(204,204,204) , 
         0 2px 0 rgb(201,201,201) , 
         0 3px 0 rgb(187,187,187) , 
@@ -195,7 +263,7 @@ textarea {
         0 3px 5px rgba(0,0,0,0.2), 
         0 5px 10px rgba(0,0,0,0.247059), 
         0 10px 10px rgba(0,0,0,0.2), 
-        0 20px 20px rgba(0,0,0,0.14902);
+        0 20px 20px rgba(0,0,0,0.14902); */
     margin: 4% 0;
     text-align: center;
 }
@@ -203,135 +271,63 @@ textarea {
 .title{
     max-width: 70%;
     margin-left: 15%;
-    margin-top: -5%;
-}
-
-.btn-white{
-    display: block;
-    text-align: center;
-    right: 0;
-}
-
-.btn-white span{
-    border: 10px solid #FFF;
-    background: #FFF;
-    color: #000;
-    padding: 0 15px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 30px;
-    box-shadow: 0 1px 0 rgb(204,204,204) , 0 2px 0 rgb(201,201,201) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392), 0 0 5px rgba(0,0,0,0.0980392), 0 1px 3px rgba(0,0,0,0.298039), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.247059), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.14902);
-}
-
-.btn-white span:hover{
-    
-    background: rgba(255,255,255,0.8);
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0 0 9px #fff;
-    box-shadow: none;
+    margin-top: 20%;
 }
 
 /* ==========================================================================
    SCENE 2
    ========================================================================== */
-#details {
-    padding: 20px 20px 10px;
-    
-}
-#details{
-    position: absolute;
-    left: 5%;
-    top: 4%;
-    width: 90%;
+.details {
     border-radius: 30px;
     padding: 20px 30px;
     box-sizing: border-box;
     background: #FFF;
     max-width: 363px;
+    margin: 30px auto;
 }
 
-#details h3{
-    text-align: center;
-    text-transform: uppercase;
-    color: #003c94;
-    letter-spacing: 1.6px;
-    font-size: 32px;
-    margin: 10px 0;
-}
-
-#details ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-#details ul li {
-    position: relative;
-    padding: 10px 0 20px 70px;
-    font-size: 19px;
-    color: #003c94;
-    line-height: 22px;
-}
-
-#details ul li a.map-link {
-    background: #FFF;
-    color: #003c94;
-    padding: 5px 20px;
-    text-decoration: none;
-    border-radius: 18px;
-    transition: all 0.3s ease-in-out;
-    border: 3px solid #003c94;
-    box-shadow: 0 0 9px #CCC;
-    display: inline-block;
-}
-
-#details ul li:hover a.map-link{
-    box-shadow: none;
-    border-color: transparent;
-}
-
-#details ul li a span{
-    text-decoration: none;
-}
-
-#details ul li img{
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 30px;
-    background: #003c94;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-#scene-2 .olaf{
-    width: 50%;
-    max-width: 270px;
-    bottom: 2%;
-}
-
-.olaf {
-    bottom: -2%;
-    position: absolute;
-    width: 70%;
-    right: 17%;
-    max-width: 300px;
+.details h3 {
+	font-weight: 300;
+	color: #5530a0;
+	font-size: 2em;
+	text-align: center;
+	padding: 0;
+	margin: 5px auto;
 }
 
 /* ==========================================================================
    Parallax
    ========================================================================== */
 
-#bg-scene-1{ 
-    background: url('../img/scene_1/bg.jpg') no-repeat bottom / cover;
+#background{
+    position: fixed;
+    top: -5%;
+    left: 0%;
+    width: 200%;
+    height: 100%; 
+    background: url('../img/parallax/bg.jpg') no-repeat bottom / cover;
+    transition: all ease-in-out 1.5s;
+    transition-delay: 1.5s;
 }
 
-#bg-scene-2{
-    background: url('../img/scene_2/bg.jpg') no-repeat bottom / cover;
+#parallax{
+    width: 200%;
+    transition: all ease-in-out 1s;
+    transition-delay: 2s;
+}
+
+#layer-1{ 
+    background: url('../img/parallax/bg_1.png') no-repeat 10% 90% / contain;
+    top: -20%;
+}
+
+#layer-2{
+    background: url('../img/parallax/bg_2.png') no-repeat 10% 90% / contain;
+    top: -18%;
+}
+
+#layer-3{
+    background: url('../img/parallax/bg_3.png') no-repeat 10% 90% / contain;
 }
 
 .bg_scene{
@@ -342,91 +338,21 @@ textarea {
     position: absolute
 }
 
-.water {
-    bottom: -4%;    
-    left: -10%;
-    position: absolute; 
-    max-width: 120%;
+.pajaro {
+	position: absolute;
+	top: 32%;
+	left: 37%;
+	max-width: 18%;
 }
 
-.croc{
-    max-width: 400px;
-    width: 70%;
-    left: 30%;
-    bottom: -5%;
+.arbol {
+	max-width: 45%;
+	width: auto;
     position: absolute;
+	right: -10%;
+	top: -10%;
 }
 
-.birds{
-    max-width: 400px;
-    width: 70%;
-    left: 30%;
-    bottom: 19.5%;
-    position: absolute;
-}
-
-.gabi{
-    max-width: 200px;
-    width: 20%;
-    right: -2%;
-    bottom: 14%;
-    position: absolute;
-}
-
-.nigel{
-    max-width: 200px;
-    width: 20%;
-    right: -4.4%;
-    bottom: 17%;
-    position: absolute;
-
-}
-
-.plants-left-1{
-    height: 103%;
-    left: -2%;
-    top: -2%;
-    position: absolute;
-
-}
-
-.plants-right-1{
-    width: 35%;
-    right: -2%;
-    top: -2%;
-    position: absolute;
-}
-
-.plants-left-2{
-    width: 35%;
-    left: -2%;
-    top: -2%;
-    position: absolute;
-}
-
-.plants-right-2{
-    height: 103%;
-    right: -2%;
-    top: -2%;
-    position: absolute;
-
-}
-
-.perezosa{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-}
-
-.linda{
-    position: absolute;
-    left: -2%;
-    bottom: -2px;
-    width: auto;
-    max-height: 70%;
-    max-width: 46%;
-}
 /* ==========================================================================
    Animation
    ========================================================================== */
@@ -446,7 +372,7 @@ textarea {
 }
 
 .page.anim .background{
-    filter: blur(4px);
+    /* filter: blur(4px); */
 }
 
  /* The animation code */
@@ -563,8 +489,8 @@ textarea {
    ========================================================================== */
 
 @media (max-width: 960px), handheld and (orientation: landscape) { 
-   #countdown{ font-size: 2.1em; }
-    .background, .page{ min-height: 500px; }
+   /* #countdown{ font-size: 2.1em; }
+    .background, .page{ min-height: 500px; } */
 }
 
 

@@ -1,19 +1,18 @@
 $(function(){
 
-	countDown("Apr 16, 2022 14:00:00", "Sorry, its gone!");
+	countDown("May 17, 2022 15:00:00", "Ha finalizado!");
 
-    var parallaxOne = new Parallax( document.getElementById('scene-1') );
-    var parallaxTwo = new Parallax( document.getElementById('scene-2') );
+    var parallaxOne = new Parallax( document.getElementById('parallax') );
 
 	$('.next-btn').click(function(event) {
+		$('.next-btn').off('click');
 		event.preventDefault();
 
+		$('#background').animate({left: '-=100%'});
+		$('#parallax').animate({left: '-=100%'});
 		$('.page.active').addClass('anim');
-		$('.page').delay(2000).animate({
-			left: '-=100%'},
-			1000, function() {
-				$('.page.active').removeClass('active').next('.page').addClass('active');
-		});
+		$('#main').addClass('next');
+		$('.page').delay(2000).animate({left: '-=100%'});
 	});
 
 	$('#loader').fadeOut('fast');
