@@ -1,1 +1,1 @@
-"# invite-thomas" 
+"# invite-NinachoDinoParty" 

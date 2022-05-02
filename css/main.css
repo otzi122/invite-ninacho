@@ -23,6 +23,7 @@ body{
     min-height: 100%;
     font-family: 'Barlow Condensed', sans-serif;
     overflow-x: hidden;
+    background: #ffd3b8;
 }
 
 /*
@@ -308,12 +309,13 @@ textarea {
     background: url('../img/parallax/bg.jpg') no-repeat bottom / cover;
     transition: all ease-in-out 1.5s;
     transition-delay: 1.5s;
+    max-width: 2160px;
 }
 
 #parallax{
     width: 200%;
     transition: all ease-in-out 1s;
-    transition-delay: 2s;
+    transition-delay: 1s;
 }
 
 #layer-1{ 
@@ -488,9 +490,14 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media (max-width: 960px), handheld and (orientation: landscape) { 
-   /* #countdown{ font-size: 2.1em; }
-    .background, .page{ min-height: 500px; } */
+@media (min-width: 1080px), handheld and (orientation: landscape) { 
+    #background,
+    #parallax{
+        display: none;
+    }
+    body{
+        background: url('../img/parallax/bg_landscape.jpg') no-repeat bottom / cover;
+    }
 }
 
 
