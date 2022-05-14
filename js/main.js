@@ -1,6 +1,6 @@
 $(function(){
 
-	countDown("May 17, 2022 15:00:00", "Ha finalizado!");
+	countDown("May 21, 2022 15:00:00", "Ha finalizado!");
 
     var parallaxOne = new Parallax( document.getElementById('parallax') );
 
